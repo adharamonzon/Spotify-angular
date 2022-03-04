@@ -1,0 +1,8 @@
+<app-loading *ngIf="loading"></app-loading>
+<div class="row">
+  <div class="col">
+    <input #termino type="text" (keyup)="search(termino.value)" class="form-control" placeholder="Buscar atrista....">
+  </div>
+</div>
+
+<app-cards  *ngIf="!loading" [items]="artists"></app-cards>

@@ -1,0 +1,11 @@
+<div class=" card-columns m-5 cursor">
+  <div (click)="showArtists(item)" *ngFor="let item of items" class="card text-center text-white">
+    <img [src]="item.images | noimage" class="card-img-top" alt="Album image">
+    <div class="card-body bg-dark">
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">
+        <span *ngFor="let artist of item.artists" class="badge bg-info text-dark artistName">{{artist.name}}</span>
+      </p>
+    </div>
+  </div>
+</div>
